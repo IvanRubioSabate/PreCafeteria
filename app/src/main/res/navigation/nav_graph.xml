@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentPlat1">
+
+    <fragment
+        android:id="@+id/fragmentPlat1"
+        android:name="com.example.precafeteria.fragments.FragmentPlat1"
+        android:label="Plat1" >
+        <action
+            android:id="@+id/action_plat1_to_fragmentBeguda"
+            app:destination="@id/fragmentBeguda" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentBeguda"
+        android:name="com.example.precafeteria.fragments.FragmentBeguda"
+        android:label="FragmentBeguda" >
+        <action
+            android:id="@+id/action_fragmentBeguda_to_fragmentTotal"
+            app:destination="@id/fragmentTotal" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTotal"
+        android:name="com.example.precafeteria.fragments.FragmentTotal"
+        android:label="FragmentTotal" />
+</navigation>

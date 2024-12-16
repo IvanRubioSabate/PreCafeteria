@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.FragmentPlat1">
+
+        <TextView
+            android:id="@+id/begudaH1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/beguda"
+            android:textSize="50sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/platSelector"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/begudaH1" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/inputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/platSelector">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textField"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:hint="@string/beguda"
+                app:layout_constraintBottom_toBottomOf="@id/buttonLayout"
+                app:layout_constraintEnd_toStartOf="@+id/buttonLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/buttonLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputQuantitat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:text="@string/min_quantity_value"
+                    android:textAlignment="textEnd"
+                    android:textSize="50sp" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/buttonLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                app:layout_constraintEnd_toStartOf="@id/preuUnitari"
+                app:layout_constraintStart_toEndOf="@+id/textField"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/upButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/downButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_up_24" />
+
+                <ImageButton
+                    android:id="@+id/downButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/upButton"
+                    app:srcCompat="@drawable/baseline_keyboard_arrow_down_24" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/preuUnitari"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:hint="@string/default_price"
+                android:text="@string/default_price"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="@id/buttonLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/buttonLayout"
+                app:layout_constraintTop_toTopOf="@id/buttonLayout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageButton
+            android:id="@+id/nextFragmentButton"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputLayout"
+            app:srcCompat="@drawable/baseline_arrow_right_alt_24" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

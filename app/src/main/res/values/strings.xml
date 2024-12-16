@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PreCafeteria</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_1r_plat">1r Plat</string>
+    <string name="beguda">Beguda</string>
+    <string name="default_price">0€</string>
+    <string name="min_quantity_value">1</string>
+    <string name="total">Total</string>
+    <string name="primer_plat">Primer Plat:</string>
+</resources>
